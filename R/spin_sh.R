@@ -47,7 +47,9 @@ spin_sh <- function (hair, knit = TRUE, report = TRUE, text = NULL, envir = pare
   } else {
     stop(" * Unknown Format: ", format)
   }
-  r = rle((is_matchable & grepl(doc, x)) | i)
+  # r = rle((is_matchable & grepl(doc, x)) | i)
+  r = rle(grepl(doc, x))
+
   n = length(r$lengths)
   txt = vector("list", n)
   idx = c(0L, cumsum(r$lengths))
@@ -59,7 +61,7 @@ spin_sh <- function (hair, knit = TRUE, report = TRUE, text = NULL, envir = pare
       sub(doc, "", block)
     }
     else {
-      block = strip_white(block)
+      block = strip_white(block) # error: cannot be found
       if (!length(block))
         next
       if (length(opt <- grep(rc <- "^(#|--)+(\\+|-| ----+| @knitr)",
