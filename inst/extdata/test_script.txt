@@ -1,0 +1,26 @@
+text <- "#!/bin/bash
+#' ---
+#' title:   Prepare folder structure for new gs analysis
+#' author:  Peter von Rohr <peter.vonrohr@qualitasag.ch>
+#' date:    2019-09-11
+#' ---
+#'
+#' ## Purpose
+#' This script prepares the folder structure before a new gs analysis is run.
+#'
+#' ## Settings
+#' The following three statements determine the behavior of the complete script.
+#+ script-setting, eval=FALSE
+set -o errexit    # exit immediately, if single command exits with non-zero status
+set -o nounset    # treat unset variables as errors
+set -o pipefail   # return value of pipeline is value of last command to exit with non-zero status
+                  # hence pipe fails if one command in pipe fails
+
+#' ## Constants
+#' Constant variables about the directory where the script is located, about the name of
+#' the script and about the hostname of the server on which the script runs are set.
+#+ constants-assigned, eval=FALSE
+SCRIPT_DIR=$(cd \"$(dirname \"${BASH_SOURCE[0]}\")\" && pwd)
+SCRIPT=$(basename ${BASH_SOURCE[0]})
+SERVER=`hostname`
+"
