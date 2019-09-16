@@ -2,9 +2,11 @@
 
 export(MendeleyExportToolR6)
 export(create_ghroot_project)
+export(get_latest_change)
 export(get_odg_prog_path)
 export(get_os)
 export(get_this_rmd_file)
 export(hook_convert_odg)
+export(spin_sh)
 export(use_odg_graphic)
 importFrom(R6,R6Class)
