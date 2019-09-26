@@ -223,9 +223,76 @@ insert_include_command <- function(ps_path,
     ### # write output back again
     cat(paste0(vec_rmd_src, collapse = "\n"), "\n", file = l_rmd_src$name)
 
+  } else {
+    stop(" * ERROR in insert_include_command: No position in rmd-source: ", l_rmd_src$name, "\n")
   }
 
   return(invisible(TRUE))
+}
+
+#' Return rmd source file with positions where search pattern occurs
+#'
+#' Given a search pattern in ps_path and given the path of the current
+#' working directory, all files with extension .Rmd are searched whether
+#' the string in ps_path occurs in the rmd-source file. If the pattern
+#' is found in exactly one Rmd-source file, the name of the Rmd-source
+#' file and the positions where the pattern was found is returned. If
+#' the pattern is not found or the pattern occurs in more than one
+#' Rmd-source file, NULL is returned.
+#'
+#' @param ps_path name of and path to odg-graphics file
+#' @param ps_cwd current working directory
+#'
+#' @return l_rmd_src_result list with name of rmd source file and positions where search pattern occurs
+get_rmd_src_with_pos <- function(ps_path, ps_cwd){
+  ### # initialize the result to be NULL
+  l_rmd_src_result <- NULL
+  ### # get the name of all Rmd-source documents in ps_cwd
+  vec_rmd_src <- list.files(path = ps_cwd, pattern = "Rmd$", full.names = TRUE)
+  ### # in case any Rmd-source files are found search through them
+  if (length(vec_rmd_src) > 0){
+    l_rmd_src <- lapply(vec_rmd_src, function(x) get_pat_pos(x, ps_pattern = ps_path))
+    ### # get indices of l_rmd_src of entries which are not NA
+    n_rmd_src_idx <- which(!is.na(l_rmd_src))
+
+    ### # result is only used, if s_pattern occurs in just one file
+    if (length(n_rmd_src_idx) == 1)
+      l_rmd_src_result <- list(name = vec_rmd_src[n_rmd_src_idx], position = l_rmd_src[[n_rmd_src_idx]])
+  }
+  ### # return result
+  return(l_rmd_src_result)
+}
+
+#' Get position where search pattern occurs in a file
+#'
+#' Given a search pattern and given a file that is specified
+#' by its complete path, the positions where the search
+#' pattern occurs is returned. Positions correspond to
+#' vector indices when the content of the file is read
+#' using the function \code{readLines}. These vector indices
+#' are equivalent to line numbers of the text. In case
+#' when the search pattern is not found, NA is returned.
+#'
+#' @param ps_pattern search pattern for which we search in the file
+#' @param ps_file name of the file to search for pattern
+#' @return vec_pos_found vector of positions where pattern occurs,
+#'                       NA if pattern was not found
+get_pat_pos <- function(ps_file, ps_pattern){
+  ### # check wheter ps_file is found
+  if (!file.exists(ps_file)) stop(" *** * ERROR[has_file_search_pat]: cannot find file ", ps_file)
+  ### # open connection to ps_file
+  con <- file(description = ps_file)
+  ### # read content into character vector
+  vec_rmd_src <- readLines(con = con)
+  ### # close connection con
+  close(con)
+  ### # search for pattern and return the positions
+  ### #  where the pattern was found
+  vec_pos_found <- grep(pattern = ps_pattern, x = vec_rmd_src, fixed = TRUE)
+  ### # return the result, if pattern was not found
+  ### #  return NA
+  if (length(vec_pos_found) == 0) return(NA)
+  return(vec_pos_found)
 }
 
 
