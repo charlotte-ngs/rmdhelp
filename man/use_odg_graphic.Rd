@@ -37,8 +37,20 @@ used is called odg_figure from the rmddochelper package.
 After copying the template, it can be modified using a
 pre-defined tool. By default this tool is LibreOffice draw.
 }
+\details{
+After an odg graphic is created, the tags of the r-code-chunk
+are changed to invoke the hook-convert function that converts
+the odg file into pdf or a png graphic format. The hook
+function must be registered using a call to
+`knitr::knit_hooks$set()`. See the examples section for more
+details.
+}
 \examples{
 \dontrun{
+# register hook-convert function at beginning of document
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
+# ... more document content in between
+# use the following call in a code-junk and directly evaluate the function call
 rmddochelper::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
 }
 

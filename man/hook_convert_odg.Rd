@@ -24,7 +24,7 @@ of the odg-file must be run before the code in the chunk.
 \examples{
 \dontrun{
 # registration of hook function
-knitr::knit_hooks$set(hook_convert_odg = rmddochelper::hook_convert_odg)
+knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 ...
 }
 
