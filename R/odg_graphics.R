@@ -15,13 +15,13 @@
 #' create a new ODG graphics object. This new graphics object
 #' will be stored in a file which is copied from
 #' a template from a given R-package. By default, the template
-#' used is called odg_figure from the rmddochelper package.
+#' used is called odg_figure from the rmdhelp package.
 #' After copying the template, it can be modified using a
 #' pre-defined tool. By default this tool is LibreOffice draw.
 #'
 #' @examples
 #' \dontrun{
-#' rmddochelper::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
+#' rmdhelp::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
 #' }
 #'
 #' @param ps_path             file name including path of ODG graphics object file
@@ -315,7 +315,7 @@ get_pat_pos <- function(ps_file, ps_pattern){
 #' @examples
 #' \dontrun{
 #' # registration of hook function
-#' knitr::knit_hooks$set(hook_convert_odg = rmddochelper::hook_convert_odg)
+#' knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 #' ...
 #' }
 #'
@@ -335,7 +335,7 @@ hook_convert_odg <- function(before, options, envir){
     }
     ### # check that file specified by odg_path exists, o/w stop
     if (!file.exists(odg_path))
-      stop(" *** * ERROR [rmddochelper::hook_convert_odg]: Cannot find odg-file: ", odg_path)
+      stop(" *** * ERROR [rmdhelp::hook_convert_odg]: Cannot find odg-file: ", odg_path)
 
     ### # determine to which output formats we want to convert the odg file
     out_format <- c("pdf", "png")
@@ -367,7 +367,7 @@ convert_odg <- function(ps_odg_path, ps_out_format){
   ### # check restriction of only one odg-file and only
   ### #  one format
   if (length(ps_odg_path) > 1 | length(ps_out_format) > 1)
-    stop(" *** * ERROR [rmddochelper:::convert_odg] works only on single arguments")
+    stop(" *** * ERROR [rmdhelp:::convert_odg] works only on single arguments")
 
   ### # check whether conversion result already exists
   s_out_file <- paste(tools::file_path_sans_ext(basename(ps_odg_path)), ps_out_format, sep = ".")
