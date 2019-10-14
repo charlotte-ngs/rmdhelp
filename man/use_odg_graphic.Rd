@@ -33,7 +33,7 @@ Similar to the \code{devtools::use_*} functions, we want to
 create a new ODG graphics object. This new graphics object
 will be stored in a file which is copied from
 a template from a given R-package. By default, the template
-used is called odg_figure from the rmddochelper package.
+used is called odg_figure from the rmdhelp package.
 After copying the template, it can be modified using a
 pre-defined tool. By default this tool is LibreOffice draw.
 }
@@ -51,7 +51,7 @@ details.
 knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)
 # ... more document content in between
 # use the following call in a code-junk and directly evaluate the function call
-rmddochelper::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
+rmdhelp::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
 }
 
 }
