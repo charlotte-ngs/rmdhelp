@@ -29,7 +29,7 @@ a document. See examples for more details.
 \examples{
 \dontrun{
 ```{r}
-cat(rmddochelper::get_latest_change(), "\\n")
+cat(rmddochelper::get_latest_change(), "\n")
 ```
 }
 

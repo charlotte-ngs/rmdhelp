@@ -4,7 +4,6 @@
 \name{MendeleyExportToolR6}
 \alias{MendeleyExportToolR6}
 \title{R6 Class For A Mendeley Exporter Tool}
-\format{An object of class \code{R6ClassGenerator} of length 24.}
 \usage{
 MendeleyExportToolR6$new()
 }
@@ -23,16 +22,6 @@ records go either to a given directory or to a specified file. The main purpose 
 this tool is to read the exported BibTeX file from Mendeley and collect them into
 a local BibTeX file.
 }
-\section{Fields}{
-
-\describe{
-\item{\code{s_men_export_dir}}{directory where mendeley exports its BibTeX records}
-
-\item{\code{s_local_bib_file}}{name of local BibTeX file}
-
-\item{\code{s_this_rmd_file}}{full path to current Rmarkdown source document}
-}}
-
 \section{Public Methods}{
 
 \describe{
@@ -62,14 +51,138 @@ a local BibTeX file.
 # instantiate a new MendeleyExportTool object
 met <- rmddochelper::MendeleyExportToolR6$new()
 # setting the current rmd-file
-mrmt$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
+met$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
                               rstudioapi::getActiveDocumentContext()$path,
                               rprojroot::thisfile()))
 # check whether mendeley export dir exists
-met.exists_mendeley_export_dir()
+met$exists_mendeley_export_dir()
 # add a new reference to the local BibTeX file
 met$add("Phocas1998")
 }
 
 }
-\keyword{datasets}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{s_men_export_dir}}{directory where mendeley exports its BibTeX records}
+
+\item{\code{s_local_bib_file}}{name of local BibTeX file}
+
+\item{\code{s_this_rmd_file}}{full path to current Rmarkdown source document}
+}
+\if{html}{\out{</div>}}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{s_men_export_dir}}{directory where mendeley exports its BibTeX records}
+
+\item{\code{s_local_bib_file}}{name of local BibTeX file}
+
+\item{\code{s_this_rmd_file}}{full path to current Rmarkdown source document}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-new}{\code{MendeleyExportToolR6$new()}}
+\item \href{#method-set_mendeley_export_dir}{\code{MendeleyExportToolR6$set_mendeley_export_dir()}}
+\item \href{#method-get_mendeley_export_dir}{\code{MendeleyExportToolR6$get_mendeley_export_dir()}}
+\item \href{#method-set_local_bib_file}{\code{MendeleyExportToolR6$set_local_bib_file()}}
+\item \href{#method-get_local_bib_file}{\code{MendeleyExportToolR6$get_local_bib_file()}}
+\item \href{#method-set_this_rmd_file}{\code{MendeleyExportToolR6$set_this_rmd_file()}}
+\item \href{#method-get_this_rmd_file}{\code{MendeleyExportToolR6$get_this_rmd_file()}}
+\item \href{#method-add}{\code{MendeleyExportToolR6$add()}}
+\item \href{#method-clone}{\code{MendeleyExportToolR6$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$new(
+  ps_men_export_dir = getOption("rmdhelp.mendeley.export.dir"),
+  ps_local_bib_file = "bibliography.bib",
+  ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
+    rstudioapi::getActiveDocumentContext()$path, rprojroot::thisfile())
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-set_mendeley_export_dir"></a>}}
+\subsection{Method \code{set_mendeley_export_dir()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_mendeley_export_dir(ps_men_export_dir)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_mendeley_export_dir"></a>}}
+\subsection{Method \code{get_mendeley_export_dir()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_mendeley_export_dir()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-set_local_bib_file"></a>}}
+\subsection{Method \code{set_local_bib_file()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_local_bib_file(ps_local_bib_file)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_local_bib_file"></a>}}
+\subsection{Method \code{get_local_bib_file()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_local_bib_file()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-set_this_rmd_file"></a>}}
+\subsection{Method \code{set_this_rmd_file()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_this_rmd_file(ps_this_rmd_file)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-get_this_rmd_file"></a>}}
+\subsection{Method \code{get_this_rmd_file()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_this_rmd_file()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-add"></a>}}
+\subsection{Method \code{add()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$add(
+  ps_new_ref,
+  pb_is_rstudio_available = rstudioapi::isAvailable()
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-clone"></a>}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

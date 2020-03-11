@@ -4,9 +4,12 @@
 \alias{beamer_with_notes}
 \title{Render beamer presentation with notes}
 \usage{
-beamer_with_notes(ps_input_path,
+beamer_with_notes(
+  ps_input_path,
   ps_output_file = paste0(tools::file_path_sans_ext(basename(ps_input_path)),
-  "_with_notes.pdf"), ps_in_header = "header_show_notes.tex")
+    "_with_notes.pdf"),
+  ps_in_header = "header_show_notes.tex"
+)
 }
 \arguments{
 \item{ps_input_path}{rmarkdown source file with note sections}

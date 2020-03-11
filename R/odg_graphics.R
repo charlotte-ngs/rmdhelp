@@ -433,3 +433,22 @@ get_odg_prog_path <- function(){
     return("soffice")
   }
 }
+
+## --- Show knit hook command
+#'
+#' @title Show Knit Hook Command
+#'
+#' @description
+#' In every document that contains a graphic or diagram, we have to add the
+#' odg-conversion function as knit-hook. This statement is not easy to remember
+#' and therefore, we want a short cut with a simple function
+#'
+#' @examples
+#' \dontrun{
+#' show_knit_hook_call()
+#' }
+#' @export show_knit_hook_call
+show_knit_hook_call <- function(){
+  return("knitr::knit_hooks$set(hook_convert_odg = rmdhelp::hook_convert_odg)")
+}
+

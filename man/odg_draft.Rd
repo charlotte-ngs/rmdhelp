@@ -4,8 +4,13 @@
 \alias{odg_draft}
 \title{Copy a draft template file for a odg graphics}
 \usage{
-odg_draft(file, template = "odg_figure", package = NULL,
-  create_dir = "default", pbOverwrite = FALSE)
+odg_draft(
+  file,
+  template = "odg_figure",
+  package = NULL,
+  create_dir = "default",
+  pbOverwrite = FALSE
+)
 }
 \arguments{
 \item{file}{name of the and path to the new document}

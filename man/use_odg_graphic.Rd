@@ -4,9 +4,16 @@
 \alias{use_odg_graphic}
 \title{Create New ODG Graphics Object}
 \usage{
-use_odg_graphic(ps_path, ps_cwd = getwd(), ps_rmd_src = NULL,
-  ps_odg_template = "odg_figure", ps_template_package = "rmdhelp",
-  pb_recursive = TRUE, pb_edit = TRUE, pb_insert_include = TRUE)
+use_odg_graphic(
+  ps_path,
+  ps_cwd = getwd(),
+  ps_rmd_src = NULL,
+  ps_odg_template = "odg_figure",
+  ps_template_package = "rmdhelp",
+  pb_recursive = TRUE,
+  pb_edit = TRUE,
+  pb_insert_include = TRUE
+)
 }
 \arguments{
 \item{ps_path}{file name including path of ODG graphics object file}

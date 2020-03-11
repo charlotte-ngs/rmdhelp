@@ -4,8 +4,7 @@
 \alias{create_header_hide_notes}
 \title{Create latex header file to hide notes}
 \usage{
-create_header_hide_notes(ps_input_dir,
-  ps_in_header = "header_hide_notes.tex")
+create_header_hide_notes(ps_input_dir, ps_in_header = "header_hide_notes.tex")
 }
 \arguments{
 \item{ps_input_dir}{rmarkdown input directory}
