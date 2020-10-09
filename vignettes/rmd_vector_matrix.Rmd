@@ -1,0 +1,29 @@
+---
+title: "Vectors and Matrices in Rmarkdown"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vectors and Matrices in Rmarkdown}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rmdhelp)
+```
+
+# Disclaimer
+The basic features to convert vectors and matrices from R to Rmarkdown are described in this document.
+
+
+# Motivation and Background
+Vectors and matrices are data objects which are used very frequently. My own use-case comes from teaching. I teach courses in applied statistical methods in animal science and livestock breeding. The material of these courses often contain descriptions of linear models which are written in matrix-vector notation. Therefore it is important to 
+
+
+# Vectors and Matrices in R

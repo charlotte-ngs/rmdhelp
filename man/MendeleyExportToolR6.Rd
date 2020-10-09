@@ -99,6 +99,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$new(
@@ -112,6 +113,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-set_mendeley_export_dir"></a>}}
+\if{latex}{\out{\hypertarget{method-set_mendeley_export_dir}{}}}
 \subsection{Method \code{set_mendeley_export_dir()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_mendeley_export_dir(ps_men_export_dir)}\if{html}{\out{</div>}}
@@ -120,6 +122,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-get_mendeley_export_dir"></a>}}
+\if{latex}{\out{\hypertarget{method-get_mendeley_export_dir}{}}}
 \subsection{Method \code{get_mendeley_export_dir()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_mendeley_export_dir()}\if{html}{\out{</div>}}
@@ -128,6 +131,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-set_local_bib_file"></a>}}
+\if{latex}{\out{\hypertarget{method-set_local_bib_file}{}}}
 \subsection{Method \code{set_local_bib_file()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_local_bib_file(ps_local_bib_file)}\if{html}{\out{</div>}}
@@ -136,6 +140,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-get_local_bib_file"></a>}}
+\if{latex}{\out{\hypertarget{method-get_local_bib_file}{}}}
 \subsection{Method \code{get_local_bib_file()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_local_bib_file()}\if{html}{\out{</div>}}
@@ -144,6 +149,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-set_this_rmd_file"></a>}}
+\if{latex}{\out{\hypertarget{method-set_this_rmd_file}{}}}
 \subsection{Method \code{set_this_rmd_file()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$set_this_rmd_file(ps_this_rmd_file)}\if{html}{\out{</div>}}
@@ -152,6 +158,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-get_this_rmd_file"></a>}}
+\if{latex}{\out{\hypertarget{method-get_this_rmd_file}{}}}
 \subsection{Method \code{get_this_rmd_file()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$get_this_rmd_file()}\if{html}{\out{</div>}}
@@ -160,6 +167,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-add"></a>}}
+\if{latex}{\out{\hypertarget{method-add}{}}}
 \subsection{Method \code{add()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{MendeleyExportToolR6$add(
@@ -171,6 +179,7 @@ met$add("Phocas1998")
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
