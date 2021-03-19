@@ -2,6 +2,7 @@
 
 export(MendeleyExportToolR6)
 export(beamer_with_notes)
+export(clean_rmd_dir)
 export(create_ghroot_project)
 export(create_header_hide_notes)
 export(get_latest_change)
