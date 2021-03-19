@@ -4,12 +4,9 @@ export(MendeleyExportToolR6)
 export(R6ClassCount)
 export(bcolumn_vector)
 export(beamer_with_notes)
-<<<<<<< HEAD
-export(clean_rmd_dir)
-=======
 export(bmatrix)
 export(brow_vector)
->>>>>>> 7cd2a92320dcdb69e682fac7a18acf53ac91b96d
+export(clean_rmd_dir)
 export(create_ghroot_project)
 export(create_header_hide_notes)
 export(get_latest_change)
