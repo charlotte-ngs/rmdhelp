@@ -120,6 +120,9 @@ get_latest_change <- function(ps_msg = "Latest Changes"){
 clean_rmd_dir <- function(ps_rmd_dir){
   # vector of elements to be cleaned
   vec_element_path <- list.files(path = ps_rmd_dir, pattern = '[^Rmd]$', full.names = 'TRUE')
+  # exclude all directories from list of element paths
+  vec_element_path <- vec_element_path[!fs::is_dir(path = vec_element_path)]
+  # file names from complete paths
   vec_element_files <- basename(vec_element_path)
   # choice for user
   cat("\n * List of elements to be deleted in directory: ", ps_rmd_dir, "\n", paste0(vec_element_files, collapse = ', '), '\n')
