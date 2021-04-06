@@ -176,3 +176,24 @@ MendeleyExportToolR6 <- R6::R6Class(classname = "MendeleyExporter",
                                         return(s_rmd_result)
                                       }
                                     ))
+
+## --- Wrapper Function -------------------------------------------------------
+#'
+#'
+#' @title Wrapper to create a MendeleyExportToolR6 Object
+#'
+#' @description
+#' This wrapper creates a MendelyExportToolR6 object and returns a
+#' reference to that object as a result. All parameters for the
+#' creation of the MendelyExportToolR6 are used at their default
+#' values.
+#'
+#' @return result_met MendelyExportToolR6 object
+#'
+#' @export get_met
+get_met <- function(){
+  result_met <- MendeleyExportToolR6$new()
+  return(result_met)
+}
+
+
