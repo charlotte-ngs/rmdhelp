@@ -53,7 +53,7 @@ met <- rmdhelp::MendeleyExportToolR6$new()
 # setting the current rmd-file
 met$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
                               rstudioapi::getActiveDocumentContext()$path,
-                              rprojroot::thisfile()))
+                              whereami::thisfile()))
 # check whether mendeley export dir exists
 met$exists_mendeley_export_dir()
 # add a new reference to the local BibTeX file
@@ -106,7 +106,7 @@ met$add("Phocas1998")
   ps_men_export_dir = getOption("rmdhelp.mendeley.export.dir"),
   ps_local_bib_file = "bibliography.bib",
   ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
-    rstudioapi::getActiveDocumentContext()$path, rprojroot::thisfile())
+    rstudioapi::getActiveDocumentContext()$path, whereami::thisfile())
 )}\if{html}{\out{</div>}}
 }
 
