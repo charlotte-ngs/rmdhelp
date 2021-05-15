@@ -49,7 +49,7 @@ a local BibTeX file.
 \examples{
 \dontrun{
 # instantiate a new MendeleyExportTool object
-met <- rmddochelper::MendeleyExportToolR6$new()
+met <- rmdhelp::MendeleyExportToolR6$new()
 # setting the current rmd-file
 met$set_this_rmd_file(ps_this_rmd_file = ifelse(rstudioapi::isAvailable(),
                               rstudioapi::getActiveDocumentContext()$path,
