@@ -23,7 +23,7 @@ The basic features to convert vectors and matrices from R to Rmarkdown are descr
 
 
 # Motivation and Background
-Vectors and matrices are data objects which are used very frequently. My own use-case comes from teaching. I teach courses in applied statistical methods in animal science and livestock breeding. The material of these courses often contain descriptions of linear models which are written in matrix-vector notation. Therefore it is important to 
+Vectors and matrices are data objects which are used very frequently. My own use-case comes from teaching. I teach courses in Applied Statistical Methods In Animal Science and in Livestock Breeding and Genomics. The material of these courses often contain descriptions of linear models which are written in matrix-vector notation. Therefore it is important to be able to convert vectors and matrices in R efficiently into their representations ini Rmarkdown.
 
 
 # Vectors and Matrices in R
