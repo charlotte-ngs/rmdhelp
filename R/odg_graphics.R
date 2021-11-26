@@ -224,7 +224,7 @@ insert_include_command <- function(ps_path,
       ### # change chunk options
       vec_rmd_src[p-1] <- paste0('```{r ', tools::file_path_sans_ext(basename(ps_path)),
                                  ', echo=FALSE, hook_convert_odg=TRUE, fig_path="',
-                                 dirname(ps_path), '"}')
+                                 dirname(ps_path), '", out.width='100%'}')
       vec_rmd_src[p] <- paste0('#', vec_rmd_src[p])
       vec_rmd_src[p+1] <- paste0('knitr::include_graphics(path = "',
                                  gsub(pattern = "odg$", replacement = "png", x = ps_path),
