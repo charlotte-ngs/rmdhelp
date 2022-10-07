@@ -61,21 +61,21 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 \section{Methods}{
 \subsection{Public methods}{
 \itemize{
-\item \href{#method-new}{\code{R6ClassCount$new()}}
-\item \href{#method-out}{\code{R6ClassCount$out()}}
-\item \href{#method-increment_count}{\code{R6ClassCount$increment_count()}}
-\item \href{#method-set_prefix}{\code{R6ClassCount$set_prefix()}}
-\item \href{#method-get_prefix}{\code{R6ClassCount$get_prefix()}}
-\item \href{#method-set_suffix}{\code{R6ClassCount$set_suffix()}}
-\item \href{#method-get_suffix}{\code{R6ClassCount$get_suffix()}}
-\item \href{#method-set_count}{\code{R6ClassCount$set_count()}}
-\item \href{#method-get_count}{\code{R6ClassCount$get_count()}}
-\item \href{#method-clone}{\code{R6ClassCount$clone()}}
+\item \href{#method-R6classCount-new}{\code{R6ClassCount$new()}}
+\item \href{#method-R6classCount-out}{\code{R6ClassCount$out()}}
+\item \href{#method-R6classCount-increment_count}{\code{R6ClassCount$increment_count()}}
+\item \href{#method-R6classCount-set_prefix}{\code{R6ClassCount$set_prefix()}}
+\item \href{#method-R6classCount-get_prefix}{\code{R6ClassCount$get_prefix()}}
+\item \href{#method-R6classCount-set_suffix}{\code{R6ClassCount$set_suffix()}}
+\item \href{#method-R6classCount-get_suffix}{\code{R6ClassCount$get_suffix()}}
+\item \href{#method-R6classCount-set_count}{\code{R6ClassCount$set_count()}}
+\item \href{#method-R6classCount-get_count}{\code{R6ClassCount$get_count()}}
+\item \href{#method-R6classCount-clone}{\code{R6ClassCount$clone()}}
 }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
+\if{html}{\out{<a id="method-R6classCount-new"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$new()}\if{html}{\out{</div>}}
@@ -83,8 +83,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-out"></a>}}
-\if{latex}{\out{\hypertarget{method-out}{}}}
+\if{html}{\out{<a id="method-R6classCount-out"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-out}{}}}
 \subsection{Method \code{out()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$out(ps_prefix = NULL, ps_suffix = NULL, pn_count = NULL)}\if{html}{\out{</div>}}
@@ -92,8 +92,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-increment_count"></a>}}
-\if{latex}{\out{\hypertarget{method-increment_count}{}}}
+\if{html}{\out{<a id="method-R6classCount-increment_count"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-increment_count}{}}}
 \subsection{Method \code{increment_count()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$increment_count()}\if{html}{\out{</div>}}
@@ -101,8 +101,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_prefix"></a>}}
-\if{latex}{\out{\hypertarget{method-set_prefix}{}}}
+\if{html}{\out{<a id="method-R6classCount-set_prefix"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-set_prefix}{}}}
 \subsection{Method \code{set_prefix()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$set_prefix(ps_prefix)}\if{html}{\out{</div>}}
@@ -110,8 +110,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_prefix"></a>}}
-\if{latex}{\out{\hypertarget{method-get_prefix}{}}}
+\if{html}{\out{<a id="method-R6classCount-get_prefix"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-get_prefix}{}}}
 \subsection{Method \code{get_prefix()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$get_prefix()}\if{html}{\out{</div>}}
@@ -119,8 +119,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_suffix"></a>}}
-\if{latex}{\out{\hypertarget{method-set_suffix}{}}}
+\if{html}{\out{<a id="method-R6classCount-set_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-set_suffix}{}}}
 \subsection{Method \code{set_suffix()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$set_suffix(ps_suffix)}\if{html}{\out{</div>}}
@@ -128,8 +128,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_suffix"></a>}}
-\if{latex}{\out{\hypertarget{method-get_suffix}{}}}
+\if{html}{\out{<a id="method-R6classCount-get_suffix"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-get_suffix}{}}}
 \subsection{Method \code{get_suffix()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$get_suffix()}\if{html}{\out{</div>}}
@@ -137,8 +137,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-set_count"></a>}}
-\if{latex}{\out{\hypertarget{method-set_count}{}}}
+\if{html}{\out{<a id="method-R6classCount-set_count"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-set_count}{}}}
 \subsection{Method \code{set_count()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$set_count(pn_count)}\if{html}{\out{</div>}}
@@ -146,8 +146,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_count"></a>}}
-\if{latex}{\out{\hypertarget{method-get_count}{}}}
+\if{html}{\out{<a id="method-R6classCount-get_count"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-get_count}{}}}
 \subsection{Method \code{get_count()}}{
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{R6ClassCount$get_count()}\if{html}{\out{</div>}}
@@ -155,8 +155,8 @@ cat(cnt$out(ps_prefix = "## Task", ps_suffix="Variance components", pn_count = 1
 
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
+\if{html}{\out{<a id="method-R6classCount-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-R6classCount-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
