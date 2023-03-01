@@ -60,7 +60,7 @@ use_vignette_in_dir <- function(ps_name,
   s_name <- basename(fs::path_ext_remove(ps_name))
   # convert name of vignette to a path
   if (basename(s_name) == s_name){
-    s_vig_dir <- file.path(here::here(), "vignettes", s_name)
+    s_vig_dir <- file.path(here::here(), "vignettes")
   } else {
     s_vig_dir <- dirname(ps_name)
   }
