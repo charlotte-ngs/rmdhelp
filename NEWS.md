@@ -1,3 +1,7 @@
+# rmdhelp 0.2.5
+
+* Added missing directory creation
+
 # rmdhelp 0.2.4
 
 * Changed template from usethis to rmarkdown
