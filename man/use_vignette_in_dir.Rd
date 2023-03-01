@@ -4,12 +4,18 @@
 \alias{use_vignette_in_dir}
 \title{Create Vignette Document in Sub-directory}
 \usage{
-use_vignette_in_dir(ps_name, ps_title = fs::path_ext_remove(ps_name))
+use_vignette_in_dir(
+  ps_name,
+  ps_title = fs::path_ext_remove(ps_name),
+  pb_open = FALSE
+)
 }
 \arguments{
 \item{ps_name}{Base of vignette file name}
 
 \item{ps_title}{Title of vignette}
+
+\item{pb_open}{Directly open the vignette}
 }
 \description{
 A vignette is created in a separate subdirectory. The subdirectory by default is
