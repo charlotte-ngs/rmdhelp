@@ -1,3 +1,7 @@
+# rmdhelp 0.2.1
+
+* Corrected wrong variable name in vig_to_dir for target directory
+
 # rmdhelp 0.2.0
 
 * Vignettes in subdirectories
