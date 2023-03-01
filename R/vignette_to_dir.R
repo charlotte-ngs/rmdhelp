@@ -85,9 +85,9 @@ use_vignette_in_dir <- function(ps_name,
   vec_vig <- readLines(con_vig)
   close(con_vig)
   s_result_vig <- glue::glue(paste0(vec_vig, collapse = "\n"),
-                             vignette_title = ps_title,
-                             braced_title = ps_title,
-                             .open = "{{{",
+                             vignette_title        = ps_title,
+                             braced_vignette_title = ps_title,
+                             .open  = "{{{",
                              .close = "}}}")
   # write output
   cat(s_result_vig, "\n", sep = "", file = s_vig_path)
