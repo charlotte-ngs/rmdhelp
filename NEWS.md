@@ -1,3 +1,7 @@
+# rmdhelp 0.2.3
+
+* Corrected determined vignette name
+
 # rmdhelp 0.2.2
 
 * Corrected determined vig_dir
