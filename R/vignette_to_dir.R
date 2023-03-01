@@ -30,8 +30,10 @@ vig_to_dir <- function(pvec_rmd_doc = list.files(file.path(here::here(), "vignet
   # loop over documents
   for (d in pvec_rmd_doc){
     s_dir_name <- fs::path_ext_remove(basename(d))
+    s_vig_name <- d
+    if (fs::path_ext(s_vig_name) != "Rmd") fs::path_ext(s_vig_name) <- "Rmd"
     fs::dir_create(file.path(ps_trg_dir, s_dir_name))
-    fs::file_move(file.path(here::here(), "vignettes", d), file.path(ps_trg_dir, s_dir_name))
+    fs::file_move(file.path(here::here(), "vignettes", s_vig_name), file.path(ps_trg_dir, s_dir_name))
   }
 }
 
