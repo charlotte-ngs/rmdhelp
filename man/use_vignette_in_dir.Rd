@@ -7,6 +7,8 @@
 use_vignette_in_dir(
   ps_name,
   ps_title = fs::path_ext_remove(ps_name),
+  ps_template = "vignette",
+  ps_pkg = "rmdhelp",
   pb_open = FALSE
 )
 }
@@ -14,6 +16,8 @@ use_vignette_in_dir(
 \item{ps_name}{Base of vignette file name}
 
 \item{ps_title}{Title of vignette}
+
+\item{ps_template}{Name of template to be used}
 
 \item{pb_open}{Directly open the vignette}
 }
