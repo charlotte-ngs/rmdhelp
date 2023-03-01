@@ -66,14 +66,18 @@ use_vignette_in_dir <- function(ps_name,
                                 ps_template = "vignette",
                                 ps_pkg      = "rmdhelp",
                                 pb_open     = FALSE){
-  s_name <- basename(fs::path_ext_remove(ps_name))
+  s_name <- basename(ps_name)
   # convert name of vignette to a path
   if (basename(ps_name) == s_name){
-    s_vig_dir <- file.path("vignettes", s_name)
+    s_vig_dir <- file.path("vignettes", fs::path_ext_remove(s_name))
   } else {
-    s_vig_dir <- dirname(ps_name)
+    s_vig_dir <- ps_name
   }
-  s_vig_path <- file.path(s_vig_dir, s_name)
+  s_vig_file <- s_name
+  if (fs::path_ext(s_vig_file) != ".Rmd") fs::path_ext(s_vig_file) <- "Rmd"
+  s_vig_path <- file.path(s_vig_dir, s_vig_file)
+  # check whether s_vig_dir exists
+  if (!dir.exists(s_vig_dir)) dir.create(s_vig_dir, recursive = TRUE)
   # create vignette document using rmarkdown::draft
   rmarkdown::draft(s_vig_path, template = ps_template, package = ps_pkg, edit = FALSE)
   # replace template
