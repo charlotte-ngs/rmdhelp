@@ -1,3 +1,7 @@
+# rmdhelp 0.2.4
+
+* Changed template from usethis to rmarkdown
+
 # rmdhelp 0.2.3
 
 * Corrected determined vignette name
