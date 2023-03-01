@@ -1,3 +1,7 @@
+# rmdhelp 0.2.2
+
+* Corrected determined vig_dir
+
 # rmdhelp 0.2.1
 
 * Corrected wrong variable name in vig_to_dir for target directory
