@@ -1,3 +1,7 @@
+# rmdhelp 0.2.6
+
+* Corrected replacement tag for braced title
+
 # rmdhelp 0.2.5
 
 * Added missing directory creation
