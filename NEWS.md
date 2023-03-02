@@ -1,3 +1,7 @@
+# rmdhelp 0.2.7
+
+* Documented alternative available diagram formats in use_odg_graphic()
+
 # rmdhelp 0.2.6
 
 * Corrected replacement tag for braced title
