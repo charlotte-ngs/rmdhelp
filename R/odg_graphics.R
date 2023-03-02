@@ -11,13 +11,14 @@
 #' @title Create New ODG Graphics Object
 #'
 #' @description
-#' Similar to the \code{devtools::use_*} functions, we want to
+#' Similar to the \code{usethis::use_*} functions, we want to
 #' create a new ODG graphics object. This new graphics object
 #' will be stored in a file which is copied from
 #' a template from a given R-package. By default, the template
-#' used is called odg_figure from the rmdhelp package.
-#' After copying the template, it can be modified using a
-#' pre-defined tool. By default this tool is LibreOffice draw.
+#' used is called 'odg_figure' from the rmdhelp package. Alternative
+#' available templates are 'odg_draw_a4_landscape' and 'odg_draw_a4_portrait'
+#' for a4-sized diagrams. After copying the template, it can be modified
+#' using a pre-defined tool. By default this tool is LibreOffice draw.
 #'
 #' @details
 #' After an odg graphic is created, the tags of the r-code-chunk
@@ -34,6 +35,11 @@
 #' # ... more document content in between
 #' # use the following call in a code-junk and directly evaluate the function call
 #' rmdhelp::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg")
+#' # create a4-diagrams
+#' rmdhelp::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg",
+#'                          ps_odg_template = "odg_draw_a4_portrait")
+#' rmdhelp::use_odg_graphic(ps_odg_file = "my_odg_graphic.odg",
+#'                          ps_odg_template = "odg_draw_a4_landscape")
 #' }
 #'
 #' @param ps_path             file name including path of ODG graphics object file
