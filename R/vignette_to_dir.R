@@ -65,7 +65,7 @@ use_vignette_in_dir <- function(ps_name,
                                 ps_title    = fs::path_ext_remove(ps_name),
                                 ps_template = "vignette",
                                 ps_pkg      = "rmdhelp",
-                                pb_open     = FALSE){
+                                pb_open     = TRUE){
   s_name <- basename(ps_name)
   # convert name of vignette to a path
   if (basename(ps_name) == s_name){

@@ -1,3 +1,7 @@
+# rmdhelp 0.2.8
+
+* Changed default setting for opening vignette document after creation with use_vignette_in_dir()
+
 # rmdhelp 0.2.7
 
 * Documented alternative available diagram formats in use_odg_graphic()
