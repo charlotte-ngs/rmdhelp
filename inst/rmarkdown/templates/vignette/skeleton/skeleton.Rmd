@@ -14,4 +14,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Disclaimer
 
+
+
+```{r, echo=FALSE, results='asis'}
+if (is.element("rmdhelp", installed.packages()))
+  cat(paste0(rmdhelp::get_latest_change()))
+```
