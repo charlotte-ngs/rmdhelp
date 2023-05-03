@@ -1,3 +1,7 @@
+# rmdhelp 0.2.10
+
+* Added package here as dependency
+
 # rmdhelp 0.2.9
 
 * Added Disclaimer as first header and the latest change message to the vignette template
