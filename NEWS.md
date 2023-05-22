@@ -1,3 +1,7 @@
+# rmdhelp 0.2.11
+
+* Clean-up R-source files related to bmatrix, i.e., move bmatrix.R to scratch folder
+
 # rmdhelp 0.2.10
 
 * Added package here as dependency
