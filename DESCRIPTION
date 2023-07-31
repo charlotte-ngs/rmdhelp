@@ -1,12 +1,11 @@
 Package: rmdhelp
 Type: Package
-Title: What the Package Does (Title Case)
+Title: RMarkdown Helper
 Version: 0.2.11
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Peter von Rohr
+Description: Adds functionality missing from RMarkdown which is 
+    considered useful for seamless writing of texts used in teaching.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
@@ -18,3 +17,6 @@ VignetteBuilder: knitr
 Imports: 
     here,
     RefManageR
+Authors@R: c(
+    person("Peter", "von Rohr", , "peter.vonrohr@usys.ethz.ch", role = "aut")
+  )
