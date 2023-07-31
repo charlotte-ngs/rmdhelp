@@ -18,5 +18,5 @@ Imports:
     here,
     RefManageR
 Authors@R: c(
-    person("Peter", "von Rohr", , "peter.vonrohr@usys.ethz.ch", role = "aut")
+    person("Peter", "von Rohr", , "peter.vonrohr@usys.ethz.ch", role = c("aut", "cre"))
   )

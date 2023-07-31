@@ -94,7 +94,7 @@ get_this_rmd_file <- function(){
 #' @export get_latest_change
 get_latest_change <- function(ps_msg = "Latest Changes"){
   st_result <- paste0("\n---\n\n"," _", ps_msg, ": ",
-                      Sys.time(), " (", Sys.info()[["user"]], ")_", collapse = "")
+                      format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z"), " (", Sys.info()[["user"]], ")_", collapse = "")
   return(st_result)
 }
 

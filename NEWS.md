@@ -1,5 +1,7 @@
 # rmdhelp 0.2.12
 
+* Fix strange data format in `get_latest_change()`
+
 # rmdhelp 0.2.11
 
 * Fixed broken function `brow_vector()`
