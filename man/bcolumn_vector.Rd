@@ -4,7 +4,13 @@
 \alias{bcolumn_vector}
 \title{Convert Column Vector To bmatrix in Rmarkdown}
 \usage{
-bcolumn_vector(pvec, ps_name = NULL, ps_equal_sign = "=", ps_env = NULL)
+bcolumn_vector(
+  pvec,
+  ps_name = NULL,
+  ps_equal_sign = "=",
+  ps_env = NULL,
+  ps_out_format = "html"
+)
 }
 \arguments{
 \item{pvec}{vector to be converted to Rmarkdown}
@@ -14,6 +20,8 @@ bcolumn_vector(pvec, ps_name = NULL, ps_equal_sign = "=", ps_env = NULL)
 \item{ps_equal_sign}{equal sign to be used when a variable name is given}
 
 \item{ps_env}{math environment in which matrix should be presented}
+
+\item{ps_out_format}{output format produced}
 }
 \value{
 String containing bmatrix representation of given vector

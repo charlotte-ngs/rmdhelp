@@ -1,10 +1,12 @@
 ---
 title: "Vectors and Matrices in Rmarkdown"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vectors and Matrices in Rmarkdown}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    keep_tex: true
+    keep_md: true
+  rmarkdown::html_vignette: default
 ---
 
 ```{r, include = FALSE}
@@ -27,3 +29,79 @@ Vectors and matrices are data objects which are used very frequently. My own use
 
 
 # Vectors and Matrices in R
+Vectors in R can be defined in different ways one of which is by the use of the concatenate function  `c()`. With this a vector `v` can defined as 
+
+```{r}
+v <- c(1,0,0)
+```
+
+The vector `v` can be converted to RMarkdown format and displayed in the form of a column vector, using 
+
+```{r, results='asis'}
+cat(bcolumn_vector(pvec = v, ps_name = "v", ps_env = "$$"), "\n")
+```
+
+The equivalent row vector in RMarkdown is obtained by
+
+```{r, results='asis'}
+cat(brow_vector(pvec = v, ps_name = "v^T", ps_env = "$$"), "\n")
+```
+
+
+Matrices are constructed using the `matrix()` function. For the conversion to RMarkdown the function `bmatrix()` can be used.
+
+```{r normal-size, results='asis'}
+n_nr_row <- 12
+n_nr_col <- 10
+n_start_row <- 12
+n_start_col <- 10
+for (n_row_idx in n_start_row:n_nr_row){
+  
+  #n_row_idx <- 1
+  for (n_col_idx in n_start_col:n_nr_col){
+    #n_col_idx <- 1
+    mat_A <- matrix(round(runif(n_row_idx*n_col_idx), digits = 4), 
+                    nrow = n_row_idx, ncol = n_col_idx)
+    cat(rmdhelp::bmatrix(pmat = mat_A, 
+                         ps_name = paste0("A_{", n_row_idx, ",", n_col_idx, "}",
+                                          collapse = ""), ps_env = "$$"), "\n")
+  
+  }
+}
+```
+
+The maximum number of columns that can be rendered to a pdf-document seams to be `r n_nr_col`. The question is whether, we can get more columns when reducing the size of the font using some `LaTeX` options.
+
+```{r tiny-size, results='asis', eval=TRUE}
+s_format <- "html"
+if (knitr::is_latex_output()){
+  s_format <- "latex"
+  #cat("\\tiny \n")
+}
+n_nr_row <- 12
+n_nr_col <- 12
+n_start_row <- 12
+n_start_col <- 12
+for (n_row_idx in n_start_row:n_nr_row){
+  
+  #n_row_idx <- 1
+  for (n_col_idx in n_start_col:n_nr_col){
+    #n_col_idx <- 1
+    mat_A <- matrix(round(runif(n_row_idx*n_col_idx), digits = 4), 
+                    nrow = n_row_idx, ncol = n_col_idx)
+    cat(rmdhelp::bmatrix(pmat = mat_A, 
+                         ps_name = paste0("A_{", n_row_idx, ",", n_col_idx, "}",
+                                          collapse = ""), 
+                         ps_env = "$$",
+                         ps_out_format = s_format), "\n")
+  
+  }
+}
+#if (knitr::is_latex_output()) cat("\\normalsize \n")
+```
+
+The above shows the result of reducing the output to a smaller font size. The conversion to pdf when using the 'bmatrix' output type only works when the max. counter of matrix columns is adjusted. See also at https://tex.stackexchange.com/questions/3519/how-to-use-more-than-10-tab-stops-in-bmatrix-or-other-amsmath-matrix-environment for this problem. 
+
+This is implemented in `rmdhelp` starting from version '0.2.11'. 
+
+

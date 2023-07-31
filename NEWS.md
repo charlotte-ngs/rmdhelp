@@ -1,5 +1,6 @@
 # rmdhelp 0.2.11
 
+* Fixed broken function `brow_vector()`
 * Clean-up R-source files related to bmatrix, i.e., move bmatrix.R to scratch folder
 
 # rmdhelp 0.2.10

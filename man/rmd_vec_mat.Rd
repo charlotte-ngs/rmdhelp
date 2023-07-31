@@ -9,7 +9,8 @@ rmd_vec_mat(
   ps_name = NULL,
   ps_equal_sign = "=",
   ps_env = NULL,
-  ps_out_type = "array"
+  ps_out_type = "array",
+  ps_out_format = "html"
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ rmd_vec_mat(
 \item{ps_env}{math environment in which matrix should be presented}
 
 \item{ps_out_type}{one of the output types available in Rmarkdown}
+
+\item{ps_out_format}{output format produced}
 }
 \value{
 sresult String containing Rmarkdown representation of given vector or matrix
