@@ -84,11 +84,13 @@ use_vignette_in_dir <- function(ps_name,
   con_vig <- file(s_vig_path)
   vec_vig <- readLines(con_vig)
   close(con_vig)
+  s_cur_date <- format(Sys.time(), '%Y-%m-%d')
   s_result_vig <- glue::glue(paste0(vec_vig, collapse = "\n"),
                              vignette_title        = ps_title,
                              braced_vignette_title = ps_title,
-                             .open  = "{{{",
-                             .close = "}}}")
+                             start_date = s_cur_date,
+                             .open  = "[[[",
+                             .close = "]]]")
   # write output
   cat(s_result_vig, "\n", sep = "", file = s_vig_path)
   # open file for editing, if specified

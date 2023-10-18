@@ -1,0 +1,4 @@
+name: bookdown
+description: >
+   Documents using bookdown based output such as html_document2 and pdf_document2
+create_dir: FALSE

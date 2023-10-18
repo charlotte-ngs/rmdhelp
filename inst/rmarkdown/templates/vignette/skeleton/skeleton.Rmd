@@ -1,8 +1,8 @@
 ---
-title: "{{{ vignette_title }}}"
+title: "[[[ vignette_title ]]]"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{{{ braced_vignette_title }}}
+  %\VignetteIndexEntry{[[[ braced_vignette_title ]]]}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
