@@ -7,7 +7,7 @@ output:
       toc: false
   bookdown::html_document2: 
       number_sections: false
-bibliography: bibliography.bib 
+#bibliography: bibliography.bib 
 ---
 
 ```{r, include = FALSE}
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-met <- rmdhelp::MendeleyExportToolR6$new()
+#met <- rmdhelp::MendeleyExportToolR6$new()
 ```
 
 
