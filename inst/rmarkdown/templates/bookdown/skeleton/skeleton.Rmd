@@ -2,11 +2,11 @@
 title: "[[[ vignette_title ]]]"
 date: "Started: [[[ start_date ]]] -- Last Compiled on: `r format(Sys.time(), '%Y-%m-%d')`"
 output: 
+  bookdown::html_document2: 
+      number_sections: false
   bookdown::pdf_document2: 
       number_sections: false
       toc: false
-  bookdown::html_document2: 
-      number_sections: false
 #bibliography: bibliography.bib 
 ---
 
