@@ -1,3 +1,8 @@
+# rmdhelp 0.3.0
+
+* Added template bookdown to get documents with bookdown::{html_document2,pdf_document2} 
+which are useful when working with citations.
+
 # rmdhelp 0.2.12
 
 * Fix strange data format in `get_latest_change()`
