@@ -32,5 +32,8 @@ directory path, then it is saved under that directory.
 \examples{
 \dontrun{
 use_vignette_in_dir("example-vignette", "Example Vignette")
+use_vignette_in_dir(ps_name     = "example_bookdown",
+                    ps_title    = "Example Bookdown Document",
+                    ps_template = "bookdown")
 }
 }
