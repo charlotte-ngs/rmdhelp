@@ -1,7 +1,7 @@
 Package: rmdhelp
 Type: Package
 Title: RMarkdown Helper
-Version: 0.3.0
+Version: 0.3.1
 Author: Peter von Rohr
 Description: Adds functionality missing from RMarkdown which is 
     considered useful for seamless writing of texts used in teaching.

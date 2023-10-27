@@ -1,3 +1,7 @@
+# rmdhelp 0.3.1
+
+* Allow to create vignette documents in target directories different from vignettes. Target directories are specified by additional argument.
+
 # rmdhelp 0.3.0
 
 * Added template bookdown to get documents with bookdown::{html_document2,pdf_document2} 
