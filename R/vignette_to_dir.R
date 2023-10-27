@@ -47,6 +47,7 @@ vig_to_dir <- function(pvec_rmd_doc = list.files(file.path(here::here(), "vignet
 #' directory path, then it is saved under that directory.
 #'
 #' @param ps_name Base of vignette file name
+#' @param ps_vig_dir alternative target directory for document root (default: vignettes)
 #' @param ps_title Title of vignette
 #' @param ps_template Name of template to be used
 #' @param pb_open Directly open the vignette
@@ -62,16 +63,17 @@ vig_to_dir <- function(pvec_rmd_doc = list.files(file.path(here::here(), "vignet
 #' use_vignette_in_dir("example-vignette", "Example Vignette")
 #' }
 use_vignette_in_dir <- function(ps_name,
+                                ps_vig_dir  = NULL,
                                 ps_title    = fs::path_ext_remove(ps_name),
                                 ps_template = "vignette",
                                 ps_pkg      = "rmdhelp",
                                 pb_open     = TRUE){
   s_name <- basename(ps_name)
   # convert name of vignette to a path
-  if (basename(ps_name) == s_name){
+  if (is.null(ps_vig_dir)){
     s_vig_dir <- file.path("vignettes", fs::path_ext_remove(s_name))
   } else {
-    s_vig_dir <- ps_name
+    s_vig_dir <- ps_vig_dir
   }
   s_vig_file <- s_name
   if (fs::path_ext(s_vig_file) != ".Rmd") fs::path_ext(s_vig_file) <- "Rmd"
