@@ -6,6 +6,7 @@
 \usage{
 use_vignette_in_dir(
   ps_name,
+  ps_vig_dir = NULL,
   ps_title = fs::path_ext_remove(ps_name),
   ps_template = "vignette",
   ps_pkg = "rmdhelp",
@@ -14,6 +15,8 @@ use_vignette_in_dir(
 }
 \arguments{
 \item{ps_name}{Base of vignette file name}
+
+\item{ps_vig_dir}{alternative target directory for document root (default: vignettes)}
 
 \item{ps_title}{Title of vignette}
 
