@@ -73,7 +73,7 @@ use_vignette_in_dir <- function(ps_name,
   if (is.null(ps_vig_dir)){
     s_vig_dir <- file.path("vignettes", fs::path_ext_remove(s_name))
   } else {
-    s_vig_dir <- ps_vig_dir
+    s_vig_dir <- file.path(ps_vig_dir, fs::path_ext_remove(s_name))
   }
   s_vig_file <- s_name
   if (fs::path_ext(s_vig_file) != ".Rmd") fs::path_ext(s_vig_file) <- "Rmd"
