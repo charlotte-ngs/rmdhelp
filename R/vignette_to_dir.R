@@ -61,6 +61,9 @@ vig_to_dir <- function(pvec_rmd_doc = list.files(file.path(here::here(), "vignet
 #' @examples
 #' \dontrun{
 #' use_vignette_in_dir("example-vignette", "Example Vignette")
+#' use_vignette_in_dir(ps_name     = "example_bookdown",
+#'                     ps_title    = "Example Bookdown Document",
+#'                     ps_template = "bookdown")
 #' }
 use_vignette_in_dir <- function(ps_name,
                                 ps_vig_dir  = NULL,
